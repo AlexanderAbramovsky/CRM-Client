@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sahan.abr.fx.controllers.MainController">
+  <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: steelblue;">
+         <children>
+            <Button fx:id="buttonTimeTable" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionTimeTable" prefHeight="30.0" prefWidth="200.0" text="Расписание">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="lg" />
+                  <String fx:value="primary" />
+                  <String fx:value="toggle-button-menu-calendar-right" />
+                  <String fx:value="middle" />
+               </styleClass></Button>
+            <Button fx:id="buttonCustomers" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionCustomers" text="Посетители">
+               <styleClass>
+                  <String fx:value="lg" />
+                  <String fx:value="primary" />
+                  <String fx:value="toggle-button-menu-family-right" />
+                  <String fx:value="middle" />
+               </styleClass></Button>
+            <Button fx:id="buttonSubscription" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionSubscription" text="Абонементы">
+               <styleClass>
+                  <String fx:value="lg" />
+                  <String fx:value="primary" />
+                  <String fx:value="toggle-button-menu-subscription-right" />
+                  <String fx:value="middle" />
+               </styleClass></Button>
+            <TitledPane animated="false" text="Сотрудники">
+               <content>
+                  <VBox spacing="5.0" style="-fx-background-color: #4682b2; -fx-border-color: transparent;">
+                     <children>
+                        <Button fx:id="buttonEmployees" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionEmployees" text="Сотрудники" VBox.vgrow="ALWAYS">
+                           <styleClass>
+                              <String fx:value="lg" />
+                              <String fx:value="primary" />
+                              <String fx:value="middle" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="buttonEmployeesTimeTable" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionEmployeesTimeTable" text="Расписание">
+                           <styleClass>
+                              <String fx:value="lg" />
+                              <String fx:value="primary" />
+                              <String fx:value="middle" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+               <styleClass>
+                  <String fx:value="titled-pane-menu-employees-right" />
+                  <String fx:value="middle" />
+               </styleClass>
+            </TitledPane>
+            <Button fx:id="buttonReports" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionReports" text="Отчеты">
+               <styleClass>
+                  <String fx:value="lg" />
+                  <String fx:value="primary" />
+                  <String fx:value="toggle-button-menu-reports-right" />
+                  <String fx:value="middle" />
+               </styleClass>
+            </Button>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+    <StackPane fx:id="vistaHolder" style="-fx-background-color: white;" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin></StackPane>
+  </children>
+</HBox>

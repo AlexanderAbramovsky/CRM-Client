@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="530.0" prefWidth="900.0" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldSurname">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Фамилия">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldPhoneNumber">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Номер телефона">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldName">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Имя">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldContactPhoneNumber">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="134.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Номер телефона для связи">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldMiddleName">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Отчество">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label text="Паспорт:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldPassportSeries" alignment="CENTER" prefHeight="30.0" prefWidth="50.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Серия">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldPassportID" alignment="CENTER" prefHeight="30.0" prefWidth="70.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="номер">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldPassportIssuedBy" prefHeight="30.0" prefWidth="440.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Кем выдан">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldPassportIssueDate" alignment="CENTER" prefHeight="30.0" prefWidth="90.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Дата выдачи">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldUnitCode" alignment="CENTER" prefHeight="30.0" prefWidth="90.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Код подразделения">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label text="Договор:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldDateContract" alignment="CENTER" prefHeight="30.0" prefWidth="90.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Дата Заключения">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldContractNumber" alignment="CENTER" prefHeight="30.0" prefWidth="250.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Номер договора">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label text="Дети:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="СЮДА БУДУТ ДОБАВЛЯТЬСЯ КНОПКИ С ДЕТЬМИ !" textFill="RED">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#updateData" prefHeight="30.0" prefWidth="90.0" text="Изменить">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#saveData" prefHeight="30.0" prefWidth="90.0" text="Сохранить">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="10.0" top="10.0" />
+   </padding>
+</VBox>

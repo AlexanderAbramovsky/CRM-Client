@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane stylesheets="@../css/bootstrap3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sahan.abr.fx.controllers.schedule.TimeTable">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Расписание посещений" textFill="#4682b2">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" text="Добавить">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: aliceblue; -fx-border-color: steelblue;">
+               <children>
+                  <Label text="Поиск:" textFill="#59a7ff">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Филиал" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox prefWidth="150.0" promptText="-Все филиалы-" style="-fx-background-color: white;" />
+                        <Label text="Тренер" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox prefWidth="150.0" promptText="-Все тренера-" style="-fx-background-color: white;" />
+                        <Label text="Басейн" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox prefWidth="150.0" promptText="-Все басейны-" style="-fx-background-color: white;" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" top="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox fx:id="test" minHeight="-Infinity" prefWidth="900.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="first" text="Неделя" />
+                        <Button mnemonicParsing="false" styleClass="last" text="День" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="first" text="Сегодня" />
+                        <Button mnemonicParsing="false" styleClass="middle" text="&lt;" />
+                        <Button mnemonicParsing="false" styleClass="last" text="&gt;" />
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <DatePicker fx:id="calendar" prefHeight="146.0" prefWidth="159.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox>
+               <children>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <GridPane alignment="CENTER" hgap="5.0" style="-fx-background-color: lightgrey;" vgap="5.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.19998168945312" minWidth="10.0" prefWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" prefWidth="140.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" prefWidth="140.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" prefWidth="140.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" prefWidth="140.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" prefWidth="140.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="140.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="140.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                            <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                            <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                            <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" style="-fx-background-color: steelblue;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                 <children>
+                                    <Label text="Т: Абрамовский А.В," textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="К: Сидоркин Р.А." textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Б: Большой нижний" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-delete" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-journal" stylesheets="@../css/buttons.css" />
+                                          <Button mnemonicParsing="false" styleClass="toggle-button-pencil" stylesheets="@../css/buttons.css" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                              <VBox prefHeight="50.0" prefWidth="0.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="8">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="9">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="10">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;">
+                                 <children>
+                                    <Label text="Время">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Понедельник">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label text="Вторник">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.columnIndex="3">
+                                 <children>
+                                    <Label text="Среда">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.columnIndex="7">
+                                 <children>
+                                    <Label text="Воскресенье">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.columnIndex="6">
+                                 <children>
+                                    <Label text="Суббота">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.columnIndex="5">
+                                 <children>
+                                    <Label text="Пятница">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.columnIndex="4">
+                                 <children>
+                                    <Label text="Четверг">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="4">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="5">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="6">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BDE0FF;" GridPane.rowIndex="7">
+                                 <children>
+                                    <Label text="09-30">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                           </children>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </GridPane>
+                     </content>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

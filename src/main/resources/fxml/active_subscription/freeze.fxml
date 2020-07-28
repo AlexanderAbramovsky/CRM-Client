@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox style="-fx-background-color: aliceblue; -fx-border-color: steelblue;" stylesheets="@../../css/bootstrap3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="mainLabel" prefHeight="46.0" prefWidth="362.0" text="Заморозка абонемента" textFill="#59a7ff">
+         <VBox.margin>
+            <Insets bottom="20.0" left="10.0" />
+         </VBox.margin>
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox spacing="50.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="С" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldSTime" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="По" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldETime" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <Label text="Причина заморозки" textFill="#4682b2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAriaNote" prefHeight="115.0" prefWidth="446.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button fx:id="freezeButton" mnemonicParsing="false" onAction="#freeze" prefHeight="46.0" prefWidth="174.0" stylesheets="@../../css/buttons.css" text="Заморозить" textFill="#4c8fbf">
+               <styleClass>
+                  <String fx:value="toggle-button" />
+                  <String fx:value="lg" />
+               </styleClass>
+            </Button>
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" prefHeight="46.0" prefWidth="174.0" stylesheets="@../../css/buttons.css" text="Отмена" textFill="#4c8fbf">
+               <styleClass>
+                  <String fx:value="toggle-button" />
+                  <String fx:value="lg" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding>
+</VBox>

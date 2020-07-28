@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sahan.abr.fx.controllers.schedule.TimeTable">
+   <children>
+      <VBox>
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Расписание посещений" textFill="#4682b2">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="110.0" prefWidth="1280.0" style="-fx-background-color: aliceblue; -fx-border-color: steelblue;">
+               <children>
+                  <Label text="Поиск:" textFill="#59a7ff">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Тренер" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox prefWidth="150.0" promptText="-Все-" style="-fx-background-color: white;" />
+                        <Label text="Басейн" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox prefWidth="150.0" promptText="-Все-" style="-fx-background-color: white;" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" top="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="testTable" alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="buttonThisDay" mnemonicParsing="false" onAction="#actionThisDay" styleClass="first" text="Сегодня" />
+                              <Button fx:id="buttonLastDay" mnemonicParsing="false" onAction="#actionLastDay" styleClass="middle" text="&lt;" />
+                              <DatePicker fx:id="datePickerCalendar" onAction="#actionDataPicker" prefHeight="146.0" prefWidth="99.0" />
+                              <Button fx:id="buttonNextDay" mnemonicParsing="false" onAction="#actionNextDay" styleClass="last" text="&gt;">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                        <VBox fx:id="test" />
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox alignment="TOP_CENTER" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label prefWidth="200.0" text="Клиент" textFill="#4682b2">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefWidth="200.0" text="Заметка" textFill="#4682b2">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <VBox fx:id="vBoxClientNote" alignment="TOP_CENTER" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" style="-fx-background-color: steelblue;">
+                           <children>
+                              <Label fx:id="labelDayOfWeek" text="Понедельник 30.09.19 " textFill="WHITE">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" style="-fx-background-color: steelblue;" HBox.hgrow="ALWAYS">
+                                             <padding>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <GridPane fx:id="gridPaneTimeTable" styleClass="border-grid" stylesheets="@../css/border.css">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.00003662109375" minWidth="50.0" percentWidth="0.0" prefWidth="56.8000244140625" />
+                                          <ColumnConstraints hgrow="ALWAYS" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="ALWAYS" prefWidth="200.0" />
+                                        <ColumnConstraints hgrow="ALWAYS" prefWidth="200.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                                        <RowConstraints vgrow="SOMETIMES" />
+                                        <RowConstraints vgrow="SOMETIMES" />
+                                        <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" />
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label text="09:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="5">
+                                             <children>
+                                                <Label text="11:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="90.0" prefWidth="57.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="4">
+                                             <children>
+                                                <Label text="10:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label text="10:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label text="09:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="6">
+                                             <children>
+                                                <Label text="11:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="11">
+                                             <children>
+                                                <Label text="14:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="12">
+                                             <children>
+                                                <Label text="14:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="13">
+                                             <children>
+                                                <Label text="15:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="14">
+                                             <children>
+                                                <Label text="15:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="15">
+                                             <children>
+                                                <Label text="16:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="16">
+                                             <children>
+                                                <Label text="16:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="17">
+                                             <children>
+                                                <Label text="17:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="18">
+                                             <children>
+                                                <Label text="17:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="19">
+                                             <children>
+                                                <Label text="18:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="20">
+                                             <children>
+                                                <Label text="18:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="21">
+                                             <children>
+                                                <Label text="19:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="22">
+                                             <children>
+                                                <Label text="19:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="10">
+                                             <children>
+                                                <Label text="13:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="9">
+                                             <children>
+                                                <Label text="13:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="8">
+                                             <children>
+                                                <Label text="12:30" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="7">
+                                             <children>
+                                                <Label text="12:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #59a7ff;" GridPane.rowIndex="23">
+                                             <children>
+                                                <Label text="20:00" textFill="#4682b2">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" style="-fx-border-color: #59a7ff;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Средний бассейн" textFill="#4682b2">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" style="-fx-border-color: #59a7ff;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Большой бассейн" textFill="#4682b2">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" style="-fx-border-color: #59a7ff;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Маленький бассейн" textFill="#4682b2">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </content>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/bootstrap3.css" />
+      <URL value="@../css/label.css" />
+   </stylesheets>
+</StackPane>

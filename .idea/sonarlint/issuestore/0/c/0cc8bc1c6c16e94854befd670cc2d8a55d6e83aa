@@ -1,0 +1,4 @@
+
+\squid:UselessImportCheck"8Remove this unused import 'sahan.abr.entities.Security'.(¿‹½ú
+isquid:S3776u"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¹­šÈ
+usquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ

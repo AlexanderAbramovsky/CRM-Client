@@ -1,0 +1,56 @@
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view .scroll-bar {
+    -fx-min-width: 20px;
+    -fx-pref-width: 20px;
+    -fx-max-width: 20px;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-font-size: 14px;
+    -fx-background-color: #4682b2;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #4682b2;
+}
+
+.table-row-cell{
+
+    -fx-font-size: 25px;
+    -fx-background-color: #9cd3ff;
+    -fx-table-cell-border-color: #4682b2;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd{
+
+    -fx-font-size: 25px;
+    -fx-background-color: #e6f3fc;
+    -fx-table-cell-border-color: #4682b2;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+/*
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}*/

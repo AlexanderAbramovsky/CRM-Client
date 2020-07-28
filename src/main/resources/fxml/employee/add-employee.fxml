@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="300.0" prefWidth="780.0" style="-fx-background-color: aliceblue; -fx-border-color: steelblue;" stylesheets="@../../css/bootstrap3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sahan.abr.fx.controllers.employees.ModalAddEmployeeController">
+   <children>
+      <Label prefHeight="46.0" prefWidth="362.0" text="Добавление сотрудника" textFill="#59a7ff">
+         <VBox.margin>
+            <Insets bottom="20.0" left="10.0" />
+         </VBox.margin>
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldSurname" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Фамилия" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldName" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Имя" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldMiddleName" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Отчество" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveEmployee" prefHeight="46.0" prefWidth="174.0" stylesheets="@../../css/buttons.css" text="Сохранить" textFill="#4c8fbf">
+                     <styleClass>
+                        <String fx:value="toggle-button-save-left" />
+                        <String fx:value="lg" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldPhoneNumber" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Номер телефона" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxPosition" onAction="#actionAdministrator" prefWidth="190.0" style="-fx-background-color: white;" />
+                        <Label text="Должность" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox fx:id="h1" alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldLogin" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Логин" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox fx:id="h2" alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <PasswordField fx:id="password1" prefHeight="30.0" prefWidth="190.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Label text="Пароль" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox fx:id="h3" alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <PasswordField fx:id="password2" prefHeight="30.0" prefWidth="190.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Label text="Повторить пароль" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <Label fx:id="LabelError" text="Пароли не совпадают или логин занят" textFill="RED">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SRM Client:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SRM_Client_jar</output-path>
+    <root id="archive" name="SRM Client.jar">
+      <element id="module-output" name="SRM_Client.main" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/14/71c819f0445fc613f631698c495d9ae92a35b041/javafx-fxml-14-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.openjfx/javafx-base/14/4eddcdd8713831212ec9b396169959655cf0dc21/javafx-base-14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.6.1/6f3b8a24bf970f17289b234284c94f43eb42f0e4/slf4j-api-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.xerial/sqlite-jdbc/3.30.1/456f2e23fd0e6a615db6e738b01b9d69456d738c/sqlite-jdbc-3.30.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.12/48e4e5d60309ebd833bc528dcf77668eab3cd72c/lombok-1.18.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.openjfx/javafx-base/14/956a9be2db3fe917ebfc24c2d04ab0cb5d6714c7/javafx-base-14-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.projectlombok/lombok/1.16.20/ac76d9b956045631d1561a09289cbf472e077c01/lombok-1.16.20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/14/132514c6e75c58dd34592dad8d356f78c3f0a680/javafx-graphics-14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.openjfx/javafx-controls/14/f0f836ec9d1dd5ce0f3776cd2a87949e5191e085/javafx-controls-14-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.openjfx/javafx-controls/14/312b419feb6d5d927c80dafe13f8770bb5ff5b77/javafx-controls-14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.6.1/58e59bfb3e247097b8122243b3bfe0049c8cfae8/slf4j-simple-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/gradle-6.5/bin/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/14/ed1f8b8c5893d2d62e7c1fc66c9ba06dfe02787d/javafx-graphics-14-win.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

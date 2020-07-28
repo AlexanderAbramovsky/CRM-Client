@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sahan.abr.fx.controllers.ReportsController">
+    <children>
+        <Label fx:id="labelOperation" text="Отчеты" textFill="#4682b2">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <padding>
+                <Insets left="30.0" />
+            </padding>
+        </Label>
+        <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+            <tabs>
+                <Tab styleClass="lg" text="Абонементы">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <VBox style="-fx-border-color: steelblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox style="-fx-background-color: aliceblue; -fx-border-color: steelblue;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Поиск:" textFill="#59a7ff">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <RadioButton fx:id="radioButtonWeek111" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Все">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="fio" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="radioButtonWeek" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Клиент" toggleGroup="$fio" />
+                                                      <RadioButton fx:id="radioButtonWeek1" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Сотрудник" toggleGroup="$fio" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox spacing="10.0">
+                                                   <children>
+                                                      <RadioButton fx:id="radioButtonWeek11" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Все время">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="time" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="radioButtonWeek12" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Последняя неделя" toggleGroup="$time" />
+                                                      <RadioButton fx:id="radioButtonWeek13" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Последний месяц" toggleGroup="$time" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Фамилия" textFill="#4682b2">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="textFieldSearchSurname" prefHeight="32.0" prefWidth="317.0" style="-fx-text-fill: #4682b2;">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                   </padding>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                   </padding>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="109.0" styleClass="toggle-button-search-left" stylesheets="@../css/buttons.css" text="Найти" textFill="#4c8fbf" />
+                                                      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="188.0" styleClass="toggle-button-clear-left" stylesheets="@../css/buttons.css" text="Очистить фильтры" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="30.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Построить отчет" textFill="#59a7ff">
+                                                   <font>
+                                                      <Font name="System Italic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <RadioButton fx:id="radioButtonWeek1111" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="За последний месяц">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="timeReport" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="radioButtonWeek3" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="За последнюю неделю" toggleGroup="$timeReport" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                                   <children>
+                                                      <RadioButton fx:id="radioButtonWeek14" mnemonicParsing="false" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="За период" toggleGroup="$timeReport" />
+                                                      <Label text="С" textFill="#4682b2">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="textFieldSearchSurname2" prefHeight="32.0" prefWidth="105.0" style="-fx-text-fill: #4682b2;">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="по" textFill="#4682b2">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="textFieldSearchSurname21" prefHeight="32.0" prefWidth="105.0" style="-fx-text-fill: #4682b2;">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="109.0" styleClass="toggle-button" stylesheets="@../css/buttons.css" text="Построить" textFill="#4c8fbf" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="tableViewSubscriptionsReport" stylesheets="@../css/tables.css" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="fioEmployeeSubscriptionsReport" prefWidth="75.0" text="ФИО сотрудника" />
+                                          <TableColumn fx:id="fioClientSubscriptionsReport" prefWidth="75.0" text="ФИО клиента" />
+                                          <TableColumn fx:id="subscriptionsReport" prefWidth="75.0" text="Абонемент" />
+                                          <TableColumn fx:id="dateSubscriptionsReport" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Дата" />
+                                          <TableColumn fx:id="moneySubscriptionsReport" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Деньги" />
+                                          <TableColumn fx:id="noteSubscriptionsReport" prefWidth="75.0" text="Заметка" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children></VBox>
+                            </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab styleClass="lg" text="Расписание">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                        <VBox style="-fx-border-color: steelblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox style="-fx-background-color: aliceblue; -fx-border-color: steelblue;">
+                                 <children>
+                                    <Label text="Поиск:" textFill="#59a7ff">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Фамилия" textFill="#4682b2">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSearchSurname1" prefWidth="450.0" style="-fx-text-fill: #4682b2;">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="109.0" styleClass="toggle-button-search-left" stylesheets="@../css/buttons.css" text="Найти" textFill="#4c8fbf" />
+                                          <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="188.0" styleClass="toggle-button-clear-left" stylesheets="@../css/buttons.css" text="Очистить фильтры" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                            </children>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab styleClass="lg" text="Клиенты">
+                    <content>
+                        <AnchorPane>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                     <children>
+                        <VBox style="-fx-border-color: steelblue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox style="-fx-background-color: aliceblue; -fx-border-color: steelblue;">
+                                 <children>
+                                    <Label text="Поиск:" textFill="#59a7ff">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Фамилия" textFill="#4682b2">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textFieldSearchSurname11" prefWidth="450.0" style="-fx-text-fill: #4682b2;">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="109.0" styleClass="toggle-button-search-left" stylesheets="@../css/buttons.css" text="Найти" textFill="#4c8fbf" />
+                                          <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="188.0" styleClass="toggle-button-clear-left" stylesheets="@../css/buttons.css" text="Очистить фильтры" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </TabPane>
+    </children>
+    <stylesheets>
+        <URL value="@../css/bootstrap3.css" />
+        <URL value="@../css/border.css" />
+        <URL value="@../css/buttons.css" />
+    </stylesheets>
+</VBox>

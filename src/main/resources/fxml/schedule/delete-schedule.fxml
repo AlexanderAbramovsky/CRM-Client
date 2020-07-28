@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" style="-fx-background-color: aliceblue; -fx-border-color: steelblue;" stylesheets="@../../css/bootstrap3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" text="Отменить занятие ?" textFill="#59a7ff">
+         <VBox.margin>
+            <Insets bottom="20.0" left="10.0" />
+         </VBox.margin>
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkBoxDeleteAll" mnemonicParsing="false" styleClass="lg" text="Удалить все следующие занятия" textFill="#4682b2">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </CheckBox>
+      <HBox alignment="CENTER" spacing="20.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="46.0" prefWidth="174.0" stylesheets="@../../css/buttons.css" text="Да" textFill="#4c8fbf">
+               <styleClass>
+                  <String fx:value="toggle-button" />
+                  <String fx:value="lg" />
+               </styleClass>
+            </Button>
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" prefHeight="46.0" prefWidth="174.0" stylesheets="@../../css/buttons.css" text="Нет" textFill="#4c8fbf">
+               <styleClass>
+                  <String fx:value="toggle-button" />
+                  <String fx:value="lg" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+</VBox>

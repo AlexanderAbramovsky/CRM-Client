@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="619.0" prefWidth="1002.0" style="-fx-background-color: aliceblue; -fx-border-color: steelblue;" stylesheets="@../../css/bootstrap3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="mainLabel" text="Добавление занятия" textFill="#59a7ff">
+         <VBox.margin>
+            <Insets bottom="20.0" left="10.0" />
+         </VBox.margin>
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TabPane tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab styleClass="lg" text="Зарегистрированный">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label text="Поиск" textFill="#4682b2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="textFieldSearch" prefWidth="238.0" />
+                                    <RadioButton fx:id="radioButtonFio" mnemonicParsing="false" onAction="#setSearch" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Фамилия">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="search" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioButtonGirlPhoneNumber" mnemonicParsing="false" onAction="#setSearch" style="-fx-text-fill: #59a7ff;" styleClass="lg" text="Номер телефона" toggleGroup="$search" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </padding>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </padding>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <children>
+                                    <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#searchClient" prefHeight="32.0" prefWidth="110.0" styleClass="toggle-button-search-left" stylesheets="@../../css/buttons.css" text="Найти" textFill="#4c8fbf" />
+                                    <Button mnemonicParsing="false" onAction="#chanelSearchClient" prefHeight="32.0" prefWidth="110.0" styleClass="toggle-button-clear-left" stylesheets="@../../css/buttons.css" text="Отмена" />
+                                    <CheckBox fx:id="checkBoxPermanentSchedule" mnemonicParsing="false" styleClass="lg" text="Постоянное расписание" textFill="#4682b2">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="42.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableViewClient" stylesheets="@../../css/tables.css" VBox.vgrow="ALWAYS">
+                                 <columns>
+                                    <TableColumn fx:id="tableColumnF" prefWidth="75.0" text="Фамилия" />
+                                    <TableColumn fx:id="tableColumnI" prefWidth="75.0" text="Имя" />
+                                    <TableColumn fx:id="tableColumnO" prefWidth="75.0" text="Отчество" />
+                                    <TableColumn fx:id="tableColumnPhoneNumber" prefWidth="75.0" text="Номер Телефона" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab styleClass="lg" text="Новый">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox fx:id="NewClient" spacing="50.0">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <TextField fx:id="textFieldName" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label text="Фамилия" textFill="#4682b2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <TextField fx:id="textFieldMiddleName" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label text="Имя" textFill="#4682b2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <TextField fx:id="textFieldName1" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label text="Отчество" textFill="#4682b2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <TextField fx:id="textFieldName11" prefHeight="30.0" prefWidth="190.0" style="-fx-text-fill: #4682b2;">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label text="Номер телефона" textFill="#4682b2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="save1" maxHeight="64.0" mnemonicParsing="false" onAction="#save" prefHeight="64.0" prefWidth="174.0" stylesheets="@../../css/buttons.css" text="Сохранить" textFill="#4c8fbf">
+                                 <styleClass>
+                                    <String fx:value="toggle-button-save-left" />
+                                    <String fx:value="lg" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding>
+</VBox>

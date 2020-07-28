@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" spacing="10.0" stylesheets="@../css/bootstrap3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="110.0" prefWidth="890.0" spacing="30.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldMiddleName">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Фамилия">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldMiddleName1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Имя">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textFieldMiddleName2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Отчество">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Особенности ребенка">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextArea prefHeight="90.0" prefWidth="534.0" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldMiddleName21" alignment="CENTER" prefHeight="30.0" prefWidth="86.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Дата рождения">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldMiddleName211" alignment="CENTER" prefHeight="30.0" prefWidth="41.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Возраст">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox prefWidth="150.0" promptText="Тренер" styleClass="info" />
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <Label text="КАК БУДЕТ ВЫГЛЯДЕТЬ СПРАВКА ???" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label prefWidth="97.0" text="Абонемент:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" styleClass="success" text="Изменить" />
+            <Button mnemonicParsing="false" styleClass="danger" text="Заморозить" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="textFieldMiddleName211" alignment="CENTER" prefHeight="30.0" prefWidth="86.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Название">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldMiddleName2111" alignment="CENTER" prefHeight="30.0" prefWidth="66.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Стоймость">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldMiddleName21111" alignment="CENTER" prefHeight="30.0" prefWidth="40.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Кол-во занятий">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Срок действия: от 10.10.10 до 10.11.10" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Label text="Расписание занятий">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
+         <children>
+            <Label alignment="CENTER" prefWidth="110.0" text="Понедельник">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefWidth="110.0" text="Вторник">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefWidth="110.0" text="Среда">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefWidth="110.0" text="Четверг">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefWidth="110.0" text="Пятница">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefWidth="110.0" text="Суббота">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefWidth="110.0" text="Воскресенье">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" prefWidth="110.0" styleClass="primary" text="Понедельник" />
+            <Button mnemonicParsing="false" prefWidth="110.0" styleClass="primary" text="Вторник" />
+            <Button mnemonicParsing="false" prefWidth="110.0" styleClass="primary" text="Среда" />
+            <Button mnemonicParsing="false" prefWidth="110.0" styleClass="primary" text="Четверг" />
+            <Button mnemonicParsing="false" prefWidth="110.0" styleClass="primary" text="Пятница" />
+            <Button mnemonicParsing="false" prefWidth="110.0" styleClass="primary" text="Суббота" />
+            <Button mnemonicParsing="false" prefWidth="110.0" styleClass="primary" text="Воскресенье" />
+         </children>
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <ComboBox prefWidth="110.0" />
+            <ComboBox prefWidth="110.0" />
+            <ComboBox prefWidth="110.0" />
+            <ComboBox prefWidth="110.0" />
+            <ComboBox prefWidth="110.0" />
+            <ComboBox prefWidth="110.0" />
+            <ComboBox prefWidth="110.0" />
+         </children>
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="10.0" top="10.0" />
+   </padding>
+</VBox>

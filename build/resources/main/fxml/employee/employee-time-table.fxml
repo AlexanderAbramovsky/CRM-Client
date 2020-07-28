@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sahan.abr.fx.controllers.employees.EmployeesTimeTableController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Расписание сотрудников" textFill="#4682b2">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox style="-fx-background-color: aliceblue; -fx-border-color: steelblue;">
+               <children>
+                  <Label text="Поиск:" textFill="#59a7ff">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Фамилия" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldSearchTitle" prefHeight="32.0" prefWidth="250.0" style="-fx-text-fill: #4682b2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Должность" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxPosition" prefWidth="150.0" style="-fx-background-color: white;" />
+                        <Button fx:id="copyNextWeek" mnemonicParsing="false" onAction="#copyNextWeek" styleClass="toggle-button" stylesheets="@../../css/buttons.css" text="Повторить расписание на следующую неделю" textFill="#4c8fbf" visible="false">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="109.0" styleClass="toggle-button-search-left" stylesheets="@../../css/buttons.css" text="Найти" textFill="#4c8fbf" />
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="188.0" styleClass="toggle-button-clear-left" stylesheets="@../../css/buttons.css" text="Очистить фильтры" />
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="buttonThisWeek" mnemonicParsing="false" onAction="#actionThisWeek" text="Текущая неделя">
+                                 <styleClass>
+                                    <String fx:value="first" />
+                                    <String fx:value="toggle-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="buttonLastWeek" mnemonicParsing="false" onAction="#actionLastWeek" text="&lt;">
+                                 <styleClass>
+                                    <String fx:value="middle" />
+                                    <String fx:value="toggle-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="buttonNextWeek" mnemonicParsing="false" onAction="#actionNextWeek" text="&gt;">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="last" />
+                                    <String fx:value="toggle-button" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label fx:id="labelWeek" text="07.10.19 - 13.10.19" textFill="#4682b2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <GridPane>
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="55.0" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="Понедельник" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelMonday" text="07.10.19" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;" GridPane.columnIndex="2">
+                     <children>
+                        <Label text="Вторник" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelTuesday" text="08.10.19" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;" GridPane.columnIndex="3">
+                     <children>
+                        <Label text="Среда" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelWednesday" text="09.10.19" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;" GridPane.columnIndex="4">
+                     <children>
+                        <Label text="Четверг" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelThursday" text="10.10.19" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;" GridPane.columnIndex="5">
+                     <children>
+                        <Label text="Пятница" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelFriday" text="11.10.19" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;" GridPane.columnIndex="6">
+                     <children>
+                        <Label text="Суббота" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelSaturday" text="12.10.19" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;" GridPane.columnIndex="7">
+                     <children>
+                        <Label text="Воскресенье" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelSunday" text="13.10.19" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" style="-fx-background-color: #4682b2;">
+                     <children>
+                        <Label text="Сотрудники" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <GridPane fx:id="gridPaneEmployeesTimeTable">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="0.0" />
+                           </columnConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="15.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../../css/bootstrap3.css" />
+      <URL value="@../../css/buttons.css" />
+      <URL value="@../../css/border.css" />
+      <URL value="@../../css/label.css" />
+   </stylesheets>
+</StackPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="149.0" prefWidth="270.0" spacing="10.0" style="-fx-background-color: #e6f3fc;" styleClass="border" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="41.0" prefWidth="240.0" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="C " textFill="#4682b2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="comboBoxStart" prefWidth="80.0" style="-fx-background-color: white;" />
+            <Label text="По" textFill="#4682b2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="comboBoxEnd" prefWidth="80.0" style="-fx-background-color: white;" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="41.0" prefWidth="240.0" spacing="10.0">
+         <children>
+            <Label text="Бассеин" textFill="#4682b2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="comboBoxPoll" prefWidth="126.0" style="-fx-background-color: white;" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="buttonSaveEntry" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#saveEntry" prefHeight="48.0" prefWidth="118.0" styleClass="toggle-button-save-left" text="Сохранить" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../../css/bootstrap3.css" />
+      <URL value="@../../css/buttons.css" />
+   </stylesheets>
+</VBox>
